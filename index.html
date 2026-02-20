@@ -4,35 +4,45 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Jaro:opsz@6..72&display=swap"
+    rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>valenpou</title>
+  <title class="">valenpou</title>
 </head>
 
 <body class="bg-gray-900">
-  <h1 class="text-center text-6xl text-white">Valen</h1>
-  <main class="border-purple-950 border-4 w-200 h-fit ">
+  <h1 class="jaro-font text-center text-6xl text-white">Valen</h1>
+  <main class=w-200 h-fit ">
+
     <!-- valen sprites -->
-    <section class="flex w-fit">
-      <img class="w-120" src="/sprites/secaga.png" alt="">
+    <section class=" justify-center flex">
+    <img class=" w-120" src="/sprites/beat.png" alt="">
     </section>
 
     <!-- stats -->
-    <section class="text-white text-3xl grid">
-      <div class="flex">
+    <section class="text-white text-3xl justify-center gap-6 grid">
+      <div class="flex gap-3">
         <h1>Hambre🍔</h1>
-        <meter min="0" max="100" low="30" high="60" optimum="80" value="10"></meter>
-      </div class="flex">
-      <div class="flex">
-        <h1>Sed🥤</h1>
-        <meter min="0" max="100" low="30" high="60" optimum="80" value="10"></meter>
+        <meter id="hungerMetter" min="0" max="100" low="30" high="60" optimum="80" value=""></meter>
       </div>
-      <div class="flex">
+      <div class="flex gap-3">
         <h1>sueño💤</h1>
-        <meter min="0" max="100" low="30" high="60" optimum="80" value="10"></meter>
+        <meter id="sleepMetter" min="0" max="100" low="30" high="60" optimum="80" value=""></meter>
       </div>
-      <div class="flex">
+      <div class="flex gap-3">
         <h1>diarrea💩</h1>
-        <meter min="0" max="100" low="30" high="60" optimum="80" value="10"></meter>
+        <meter id="shitMetter" min="0" max="100" low="30" high="60" optimum="80" value=""></meter>
+      </div>
+      <div class="flex gap-3">
+        <h1>Deuda💲</h1>
+        <meter id="debtMetter" min="0" max="100" low="30" high="60" optimum="80" value=""></meter>
+      </div>
+      <div class="flex gap-3">
+        <h1>Curvatura espinal🧑‍🦼‍➡️</h1>
+        <meter id="crippleMetter" min="0" max="100" low="30" high="60" optimum="80" value="" ></meter>
       </div>
 
     </section>
