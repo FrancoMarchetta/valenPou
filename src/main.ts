@@ -34,7 +34,7 @@ setInterval(() => {
 
 
 function checkIfFuckedUp() {
-  if ($hungerMetter.value >= 30 && $sleepMetter.value >= 30 && $shitMetter.value >= 30 && $debtMetter.value >= 30 && $crippleMetter.value >= 30) {
+  if ($hungerMetter.value >= 70 && $sleepMetter.value >= 70 && $shitMetter.value >= 70 && $debtMetter.value >= 70 && $crippleMetter.value >= 70) {
     return true;
   } else {
     return false;
