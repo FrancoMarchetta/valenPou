@@ -15,10 +15,10 @@ $crippleMetter.value = 0;
 function updateMetters(metter: HTMLProgressElement) {
   let dice = Math.floor(Math.random() * 100);
   if (dice === 69) {
-    console.log(`${metter.id}, ${dice}`);
+    // console.log(`${metter.id}, ${dice}`);
     metter.value += 10;
   } else {
-    console.log("not 69");
+    // console.log("not 69");
   }
 }
 
@@ -30,7 +30,7 @@ setInterval(() => {
   updateMetters($crippleMetter);
 
   updateSprite();
-}, 1);
+}, 700); //subir o bajar para cambiar la velocidad de los medidores🌝
 
 
 function checkIfFuckedUp() {
@@ -44,17 +44,30 @@ function checkIfFuckedUp() {
 function updateSprite() {
   let fuckedUp = checkIfFuckedUp();
 
+  let observerDice = Math.floor(Math.random() * 100);
+  console.log(`observerDice: ${observerDice}`);
+
+  $sprite.addEventListener("change", () => {
+    alert(`sprite: ${$sprite.src}`)
+  })
+
   if (fuckedUp) {
     $sprite.src = "/sprites/beat.png";
 
-  } else if ($hungerMetter.value >= 30) {
+  } else if ($hungerMetter.value >= 70) {
     $sprite.src = "/sprites/hungry.png";
-  } else if ($sleepMetter.value >= 30) {
+  } else if ($sleepMetter.value >= 70) {
     $sprite.src = "/sprites/sleep.png";
-  } else if ($debtMetter.value >= 30) {
+  } else if ($debtMetter.value >= 70) {
     $sprite.src = "/sprites/worry.png";
   } else {
     $sprite.src = "/sprites/happy.png";
   }
+
+  if (observerDice === 67) {
+    $sprite.src = "/sprites/observer.png";
+
+  }
+
 }
 
