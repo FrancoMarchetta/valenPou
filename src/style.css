@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-.jaro-font {
+h1 {
   font-family: jaro;
 }
 

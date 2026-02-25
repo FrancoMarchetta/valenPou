@@ -2,19 +2,17 @@ let $sprite = document.getElementById("sprite") as HTMLImageElement;
 let offsetX = 0;
 let $cronometter: any = document.getElementById("cronometter");
 
-$cronometter.innerHTML = 0;
+$cronometter.innerHTML = 15;
 $sprite.style.transform = "translateX(50px)";
 
 setInterval(() => {
-    $cronometter.innerHTML = Number($cronometter.innerHTML) + 1;
+    $cronometter.innerHTML = Number($cronometter.innerHTML) - 1;
     console.log($cronometter.innerHTML);
 }, 1000);
 
 setTimeout(() => {
     window.location.href = "/";
 }, 15000);
-
-
 
 function start(e: TouchEvent) {
     const touch = e.touches[0];
@@ -40,9 +38,5 @@ function move(e: TouchEvent) {
     console.log(`Sprite posicionado en: ${x}px`);
 }
 
-$sprite.addEventListener('touchstart', start);
-$sprite.addEventListener('touchmove', move, { passive: false });
-
-
-
-
+$sprite.addEventListener("touchstart", start);
+$sprite.addEventListener("touchmove", move, { passive: false });

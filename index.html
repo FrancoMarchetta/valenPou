@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="/src/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Jaro:opsz@6..72&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title class="">valenpou</title>
 </head>
@@ -16,87 +17,42 @@
 <body class="bg-gray-900 min-h-screen relative overflow-hidden">
   <div class="fixed inset-0 -z-10 psychedelic-bg"></div>
   <h1 class="jaro-font text-center text-6xl text-white">Pocket Valen</h1>
-  <main class="max-w-200 h-fit mx-auto  mt-8">
-
+  <main class="max-w-200 h-fit mx-auto mt-8">
     <!-- valen sprites -->
-    <section class=" border-20 border-yellow-400 justify-center flex">
+    <section class="border-20 border-yellow-400 justify-center flex">
       <a href="fate.html">
-        <img id="sprite" class="w-120" src="" alt="">
+        <img id="sprite" class="w-120" src="" alt="" />
       </a>
     </section>
 
     <!-- stats -->
     <section class="text-white text-3xl justify-center gap-6 grid">
-      <div class="flex gap-3">
-        <h1>Hambre🍔</h1>
-        <meter id="hungerMetter" min="0" max="100" low="30" high="70" optimum="10" value="20">
-        </meter>
-        <a href="./feedScreen.html">
-          <button title="Add New" class="flex group cursor-pointer outline-none hover:rotate-90 duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"
-              class="stroke-slate-400 fill-none group-hover:fill-slate-800 group-active:stroke-slate-200 group-active:fill-slate-600 group-active:duration-0 duration-300">
-              <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-                stroke-width="1.5"></path>
-              <path d="M8 12H16" stroke-width="1.5"></path>
-              <path d="M12 16V8" stroke-width="1.5"></path>
-            </svg>
-          </button>
-        </a>
-
-      </div>
-      <div class="flex gap-3">
-        <h1>sueño💤</h1>
-        <meter id="sleepMetter" min="0" max="100" low="30" high="70" optimum="10" value=""></meter>
-        <button title="Add New" class="group cursor-pointer outline-none hover:rotate-90 duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"
-            class="stroke-slate-400 fill-none group-hover:fill-slate-800 group-active:stroke-slate-200 group-active:fill-slate-600 group-active:duration-0 duration-300">
-            <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-              stroke-width="1.5"></path>
-            <path d="M8 12H16" stroke-width="1.5"></path>
-            <path d="M12 16V8" stroke-width="1.5"></path>
-          </svg>
-        </button>
-      </div>
-      <div class="flex gap-3">
-        <h1>diarrea💩</h1>
-        <meter id="shitMetter" min="0" max="100" low="30" high="70" optimum="10" value=""></meter>
-        <button title="Add New" class="group cursor-pointer outline-none hover:rotate-90 duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"
-            class="stroke-slate-400 fill-none group-hover:fill-slate-800 group-active:stroke-slate-200 group-active:fill-slate-600 group-active:duration-0 duration-300">
-            <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-              stroke-width="1.5"></path>
-            <path d="M8 12H16" stroke-width="1.5"></path>
-            <path d="M12 16V8" stroke-width="1.5"></path>
-          </svg>
-        </button>
-      </div>
-      <div class="flex gap-3">
-        <h1>Deuda💲</h1>
-        <meter id="debtMetter" min="0" max="100" low="30" high="70" optimum="10" value=""></meter>
-        <button title="Add New" class="group cursor-pointer outline-none hover:rotate-90 duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"
-            class="stroke-slate-400 fill-none group-hover:fill-slate-800 group-active:stroke-slate-200 group-active:fill-slate-600 group-active:duration-0 duration-300">
-            <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-              stroke-width="1.5"></path>
-            <path d="M8 12H16" stroke-width="1.5"></path>
-            <path d="M12 16V8" stroke-width="1.5"></path>
-          </svg>
-        </button>
-      </div>
-      <div class="flex gap-3">
-        <h1>Curvatura espinal🧑‍🦼‍➡️</h1>
-        <meter id="crippleMetter" min="0" max="100" low="30" high="70" optimum="10" value=""></meter>
-        <button title="Add New" class="group cursor-pointer outline-none hover:rotate-90 duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24"
-            class="stroke-slate-400 fill-none group-hover:fill-slate-800 group-active:stroke-slate-200 group-active:fill-slate-600 group-active:duration-0 duration-300">
-            <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-              stroke-width="1.5"></path>
-            <path d="M8 12H16" stroke-width="1.5"></path>
-            <path d="M12 16V8" stroke-width="1.5"></path>
-          </svg>
-        </button>
+      <div id="hungerContainer" class="flex gap-3">
+        <h1 class="text-2xl">Hambre🍔</h1>
+        <meter id="hungerMetter" min="0" max="100" low="30" high="70" optimum="10" value="20"
+          class="w-60 h-12 self-center appearance-none [&::-webkit-meter-bar]:bg-slate-800 [&::-webkit-meter-bar]:border-4 [&::-webkit-meter-bar]:border-black [&::-webkit-meter-bar]:rounded-none [&::-webkit-meter-optimum-value]:bg-green-500 [&::-webkit-meter-optimum-value]:border-y-2 [&::-webkit-meter-optimum-value]:border-white/30 [&::-webkit-meter-suboptimum-value]:bg-yellow-400 [&::-webkit-meter-even-less-good-value]:bg-red-600"></meter>
       </div>
 
+      <div class="flex gap-3">
+        <h1 class="text-2xl">Fe🙏</h1>
+        <meter id="faithMetter" min="0" max="100" low="30" high="70" optimum="10" value="20"
+          class="w-60 h-12 appearance-none [&::-webkit-meter-bar]:bg-slate-800 [&::-webkit-meter-bar]:border-4 [&::-webkit-meter-bar]:border-black [&::-webkit-meter-bar]:rounded-none [&::-webkit-meter-optimum-value]:bg-green-500 [&::-webkit-meter-optimum-value]:border-y-2 [&::-webkit-meter-optimum-value]:border-white/30 [&::-webkit-meter-suboptimum-value]:bg-yellow-400 [&::-webkit-meter-even-less-good-value]:bg-red-600"></meter>
+      </div>
+      <div class="flex gap-3">
+        <h1 class="text-2xl">diarrea💩</h1>
+        <meter id="shitMetter" min="0" max="100" low="30" high="70" optimum="10" value="20"
+          class="w-60 h-12 appearance-none [&::-webkit-meter-bar]:bg-slate-800 [&::-webkit-meter-bar]:border-4 [&::-webkit-meter-bar]:border-black [&::-webkit-meter-bar]:rounded-none [&::-webkit-meter-optimum-value]:bg-green-500 [&::-webkit-meter-optimum-value]:border-y-2 [&::-webkit-meter-optimum-value]:border-white/30 [&::-webkit-meter-suboptimum-value]:bg-yellow-400 [&::-webkit-meter-even-less-good-value]:bg-red-600"></meter>
+      </div>
+      <div class="flex gap-3">
+        <h1 class="text-2xl">Deuda💲</h1>
+        <meter id="debtMetter" min="0" max="100" low="30" high="70" optimum="10" value="20"
+          class="w-60 h-12 appearance-none [&::-webkit-meter-bar]:bg-slate-800 [&::-webkit-meter-bar]:border-4 [&::-webkit-meter-bar]:border-black [&::-webkit-meter-bar]:rounded-none [&::-webkit-meter-optimum-value]:bg-green-500 [&::-webkit-meter-optimum-value]:border-y-2 [&::-webkit-meter-optimum-value]:border-white/30 [&::-webkit-meter-suboptimum-value]:bg-yellow-400 [&::-webkit-meter-even-less-good-value]:bg-red-600"></meter>
+      </div>
+      <div class="flex">
+        <h1 class="text-2xl">Curvatura espinal🧑‍🦼‍➡️</h1>
+        <meter id="crippleMetter" min="0" max="100" low="30" high="70" optimum="10" value="20"
+          class="w-60 h-12 appearance-none [&::-webkit-meter-bar]:bg-slate-800 [&::-webkit-meter-bar]:border-4 [&::-webkit-meter-bar]:border-black [&::-webkit-meter-bar]:rounded-none [&::-webkit-meter-optimum-value]:bg-green-500 [&::-webkit-meter-optimum-value]:border-y-2 [&::-webkit-meter-optimum-value]:border-white/30 [&::-webkit-meter-suboptimum-value]:bg-yellow-400 [&::-webkit-meter-even-less-good-value]:bg-red-600"></meter>
+      </div>
     </section>
   </main>
 
