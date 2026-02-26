@@ -7,35 +7,436 @@
     <link rel="stylesheet" href="/src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Jaro:opsz@6..72&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title class="">valenpou</title>
+    <title>Destino</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: #0a0a0f;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .mystic-bg {
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(88, 28, 135, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(15, 118, 110, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(91, 33, 182, 0.08) 0%, transparent 70%),
+                linear-gradient(180deg, #050508 0%, #0d0d15 50%, #0a0a12 100%);
+            z-index: -2;
+        }
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        .floating-orbs {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.3) 0%, transparent 70%);
+            top: 10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
+            bottom: 20%;
+            right: -5%;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.15) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -14s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            25% {
+                transform: translateY(-30px) rotate(5deg);
+            }
+
+            50% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            75% {
+                transform: translateY(30px) rotate(-5deg);
+            }
+        }
+
+        .divine-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(251, 191, 36, 0.03) 0%, transparent 60%);
+            pointer-events: none;
+            animation: pulse-glow 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                opacity: 0.5;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+        }
+
+        .rune-circle {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            border: 1px solid rgba(251, 191, 36, 0.05);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: rotate-slow 60s linear infinite;
+        }
+
+        .rune-circle::before {
+            content: '✧';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            color: rgba(251, 191, 36, 0.3);
+        }
+
+        @keyframes rotate-slow {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        .sprite-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            animation: breathe 6s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        .sprite-container img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 30px rgba(251, 191, 36, 0.2));
+            border-radius: 8px;
+        }
+
+        .mystic-frame {
+            position: absolute;
+            inset: -20px;
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 12px;
+            pointer-events: none;
+            animation: frame-pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes frame-pulse {
+
+            0%,
+            100% {
+                border-color: rgba(251, 191, 36, 0.1);
+                box-shadow: inset 0 0 20px rgba(251, 191, 36, 0.05);
+            }
+
+            50% {
+                border-color: rgba(251, 191, 36, 0.3);
+                box-shadow: inset 0 0 40px rgba(251, 191, 36, 0.1);
+            }
+        }
+
+        .pray-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .pray-btn {
+            position: relative;
+            padding: 1rem 3rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #fde047;
+            background: linear-gradient(135deg, rgba(30, 30, 40, 0.8) 0%, rgba(20, 20, 30, 0.9) 100%);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 4px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            text-decoration: none;
+        }
+
+        .pray-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, transparent 50%, rgba(251, 191, 36, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .pray-btn:hover {
+            border-color: rgba(251, 191, 36, 0.6);
+            box-shadow:
+                0 0 30px rgba(251, 191, 36, 0.2),
+                inset 0 0 20px rgba(251, 191, 36, 0.1);
+            transform: translateY(-2px);
+            letter-spacing: 0.25em;
+        }
+
+        .pray-btn:hover::before {
+            opacity: 1;
+        }
+
+        .pray-btn .btn-glow {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.3), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .pray-btn:hover .btn-glow {
+            left: 100%;
+        }
+
+        .pray-btn .btn-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sacrament-text {
+            text-align: center;
+            margin-top: 2rem;
+            color: rgba(251, 191, 36, 0.6);
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            font-style: italic;
+            opacity: 0;
+            animation: fade-in 2s ease-out 0.5s forwards;
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .corner-decor {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgba(251, 191, 36, 0.15);
+            pointer-events: none;
+        }
+
+        .corner-decor.top-left {
+            top: 30px;
+            left: 30px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .corner-decor.top-right {
+            top: 30px;
+            right: 30px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .corner-decor.bottom-left {
+            bottom: 30px;
+            left: 30px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .corner-decor.bottom-right {
+            bottom: 30px;
+            right: 30px;
+            border-left: none;
+            border-top: none;
+        }
+
+        .divine-text {
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.5em;
+            color: rgba(251, 191, 36, 0.4);
+            text-transform: uppercase;
+        }
+
+        .whisper {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Cinzel', serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.3em;
+            color: rgba(147, 51, 234, 0.4);
+            text-transform: uppercase;
+        }
+    </style>
+
 </head>
 
-<body class="bg-gray-900 min-h-screen relative overflow-hidden">
-    <div class="fixed inset-0 -z-10 psychedelic-bg"></div>
-    <main class="max-w-20 h-fit mx-auto mt-8">
-        <!-- valen sprites -->
-        <section class="
-         justify-center
-         flex
-        ">
-            <img id="sprite" class="w-120  max-w-fit -mt-8 " src="/sprites/cruz.jpg" alt="">
+<body>
+    <div class="mystic-bg"></div>
+
+    <div class="stars" id="stars"></div>
+
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="divine-glow"></div>
+    <div class="rune-circle"></div>
+
+    <div class="corner-decor top-left"></div>
+    <div class="corner-decor top-right"></div>
+    <div class="corner-decor bottom-left"></div>
+    <div class="corner-decor bottom-right"></div>
+
+    <div class="divine-text">✦ El Destino Te Espera ✦</div>
+    <div class="whisper">Lo que ha de ser, será</div>
+
+    <main style="padding-top: 8rem; padding-bottom: 4rem;">
+        <section class="sprite-container">
+            <div class="mystic-frame"></div>
+            <img id="sprite" src="/sprites/cruz.jpg" alt="">
         </section>
 
-        <div class="mt-8">
-            <button id="prayButton"
-                class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-800/30 backdrop-blur-lg px-6 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20">
-                <span class="text-lg">Rezar</span>
-                <div
-                    class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]">
-                    <div class="relative h-full w-10 bg-white/20"></div>
-                </div>
+        <div class="pray-button">
+            <button id="prayButton" class="pray-btn">
+                <span class="btn-glow"></span>
+                <span class="btn-text">Rezar</span>
             </button>
-
         </div>
+
+        <p class="sacrament-text">"En la quietud del alma, el destino escucha"</p>
     </main>
+
+    <script>
+        const starsContainer = document.getElementById('stars');
+        const starCount = 150;
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.animationDuration = (2 + Math.random() * 2) + 's';
+            star.style.width = (1 + Math.random() * 2) + 'px';
+            star.style.height = star.style.width;
+            starsContainer.appendChild(star);
+        }
+    </script>
 
     <script defer src="/src/pray.ts"></script>
 </body>

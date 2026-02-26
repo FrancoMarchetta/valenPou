@@ -6,11 +6,10 @@ let $crippleMetter = document.getElementById("crippleMetter",) as HTMLProgressEl
 let $sprite = document.getElementById("sprite") as HTMLImageElement;
 
 let $hungerContainer = document.getElementById("hungerContainer");
-function changeScreen() {
-  window.location.href = "/feedScreen.html";
-}
 
-$hungerContainer?.addEventListener("click", changeScreen)
+$hungerContainer?.addEventListener("click", () => {
+  window.location.href = "/feedScreen.html";
+})
 
 $sprite.src = "/sprites/happy.png";
 $hungerMetter.value = 0;
