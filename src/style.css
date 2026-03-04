@@ -9,7 +9,7 @@ h1 {
     transform: translateY(0);
   }
   to {
-    transform: translateY(100vh);
+    transform: translateY(80vh);
   }
 }
 

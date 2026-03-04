@@ -9,12 +9,13 @@ $sprite.style.transform = "translateX(50px)";
 
 
 setInterval(() => {
-    let random = Math.floor(Math.random() * 19);
+    let random = Math.floor(Math.random() * 19) + 4;
     let food = document.createElement("img");
 
     food.src = "/sprites/pizza.png";
 
-    food.classList.add("w-20", "food");
+    food.classList.add("w-20", "relative", "z-1000", "food");
+    // esta shit no va como clase de tailwind porque dios me ha abandonado
     food.style.marginLeft = `${random}rem`;
     $foodContainer.appendChild(food);
 
