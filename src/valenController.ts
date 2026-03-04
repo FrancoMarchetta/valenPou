@@ -1,9 +1,29 @@
 let $sprite = document.getElementById("sprite") as HTMLImageElement;
 let offsetX = 0;
 let $cronometter: any = document.getElementById("cronometter");
+let $foodContainer = document.getElementById("foodContainer") as HTMLDivElement;
 
 $cronometter.innerHTML = 15;
 $sprite.style.transform = "translateX(50px)";
+
+
+
+setInterval(() => {
+    let random = Math.floor(Math.random() * 19);
+    let food = document.createElement("img");
+
+    food.src = "/sprites/pizza.png";
+
+    food.classList.add("w-20", "food");
+    food.style.marginLeft = `${random}rem`;
+    $foodContainer.appendChild(food);
+
+    // cuando termina la animacion se borra para que no me ocupe espaco en el section de shit
+    food.addEventListener("animationend", () => {
+        food.remove();
+    });
+
+}, 2000);
 
 setInterval(() => {
     $cronometter.innerHTML = Number($cronometter.innerHTML) - 1;
@@ -20,6 +40,8 @@ function start(e: TouchEvent) {
     offsetX = touch.clientX - rect.left;
 }
 
+
+
 function move(e: TouchEvent) {
     if (e.cancelable) e.preventDefault();
 
@@ -35,7 +57,7 @@ function move(e: TouchEvent) {
     if (x > displayLimit) x = displayLimit;
 
     $sprite.style.transform = `translateX(${x}px)`;
-    console.log(`Sprite posicionado en: ${x}px`);
+    console.log(`Sprite posicionado en: ${x} px`);
 }
 
 $sprite.addEventListener("touchstart", start);

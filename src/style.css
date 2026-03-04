@@ -4,7 +4,15 @@ h1 {
   font-family: jaro;
 }
 
-/* .frame {
-  border: 20px solid;
-  border-image: linear-gradient(45deg, #c0a040, #f5d060, #c0a040, #8b7020) 1;
-} */
+@keyframes fall {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.food {
+  animation: fall 2s forwards;
+}
