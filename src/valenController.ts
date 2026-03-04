@@ -9,7 +9,7 @@ $sprite.style.transform = "translateX(50px)";
 
 
 setInterval(() => {
-    let random = Math.floor(Math.random() * 19) + 4;
+    let random = Math.floor(Math.random() * 18) + 4;
     let food = document.createElement("img");
 
     food.src = "/sprites/pizza.png";
