@@ -50,7 +50,7 @@ function checkIfFuckedUp() {
 function updateSprite() {
   let fuckedUp = checkIfFuckedUp();
 
-  let observerDice = Math.floor(Math.random() * 100);
+  let observerDice = Math.floor(Math.random() * 300);
   console.log(`observerDice: ${observerDice}`);
 
   $sprite.addEventListener("change", () => {
