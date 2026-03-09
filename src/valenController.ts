@@ -7,7 +7,6 @@ $cronometter.innerHTML = 15;
 $sprite.style.transform = "translateX(50px)";
 
 
-
 setInterval(() => {
     let random = Math.floor(Math.random() * 18) + 4;
     let food = document.createElement("img");
@@ -21,10 +20,13 @@ setInterval(() => {
 
     // cuando termina la animacion se borra para que no me ocupe espaco en el section de shit
     food.addEventListener("animationend", () => {
-        food.remove();
+        food.src = "/sprites/points.png";
+        setTimeout(() => {
+            food.remove();
+        }, 1000);
     });
 
-}, 2000);
+}, 3000);
 
 setInterval(() => {
     $cronometter.innerHTML = Number($cronometter.innerHTML) - 1;
