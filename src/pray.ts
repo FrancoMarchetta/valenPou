@@ -17,3 +17,4 @@ $prayButton?.addEventListener("click", pray);
 
 
 
+

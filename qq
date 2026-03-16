@@ -1,0 +1,95 @@
+[33mcommit 0c52bb12ffbf185e795db8151814b15394bee2c2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Mon Mar 9 00:34:01 2026 +0000
+
+    sprite de comida cambia por +10 para un poco de gameFeel o algo asi
+
+[33mcommit f064892faf8e0c268110363352d79d2f058630b7[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Sat Mar 7 17:07:10 2026 +0000
+
+    cambio el sprite de valen crucificado
+
+[33mcommit f0793cb2840c131bebd48a40b44c3cd8496e401d[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Sat Mar 7 16:51:25 2026 +0000
+
+    no me acuerdo pero no era importante
+
+[33mcommit 721bd1b96274730a157b2e76ce376bf7774f7247[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Wed Mar 4 15:49:13 2026 -0300
+
+    nuevo background para morfar
+
+[33mcommit b8e67e69bb4cb5e84f89a3ffa42fbc3022e3a158[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Wed Mar 4 15:42:18 2026 -0300
+
+    arreglo shitmetter
+
+[33mcommit cd996d1150c0e54279bc9169bcbe5078763e037d[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Wed Mar 4 18:38:14 2026 +0000
+
+    arreglo en posicionamiento de sprite de comida
+
+[33mcommit fc405c3f5e39322c6c349c06c3874691bf1fa17d[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Wed Mar 4 18:29:07 2026 +0000
+
+    sprites de comida caen en posiciones random
+
+[33mcommit 0245afe583fa88872d6ad8563a55fba604890ed6[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Thu Feb 26 00:17:19 2026 -0300
+
+    fondo de valen crucificado
+
+[33mcommit 7264116dfe48944e017599bf305aff3bddcd309c[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Wed Feb 25 01:01:25 2026 -0300
+
+    boton de fe randomizado
+
+[33mcommit 0debebb69147ee6081fb968592f886f4abede0e3[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Tue Feb 24 17:18:26 2026 -0300
+
+    sprite de alimentar al valen ahora se mueve
+
+[33mcommit 28ea7ec353d74088fff441f16c1c84f9323b2c79[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Sun Feb 22 16:17:05 2026 -0300
+
+    easter egg
+
+[33mcommit a9aebffcb09df90ba48a7d384c61e92e8a774d04[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Sun Feb 22 12:57:55 2026 -0300
+
+    correccion en valores para cambios de sprite
+
+[33mcommit eb0999e52c7e37fc94a934923aef6815b2064b41[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Sat Feb 21 15:01:19 2026 -0300
+
+    di vuelta los metters
+
+[33mcommit ed996241ad27dfda8bcf1f8997be79bbf1c764ce[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Fri Feb 20 15:26:35 2026 -0300
+
+    marco y ajuste de sprite
+
+[33mcommit f04620b3d430e7a812913e1ee3ffd8e34aea19a9[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Fri Feb 20 15:13:17 2026 -0300
+
+    medidores se actualizan solos con el tiempo
+
+[33mcommit 67723af5d51b7f1fa0885bd8a93c1aea290864b1[m
+Author: FrancoMarchetta <frncmarchetta@gmail.com>
+Date:   Thu Feb 12 19:47:39 2026 -0300
+
+    Initial commit

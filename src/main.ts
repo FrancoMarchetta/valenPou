@@ -5,6 +5,7 @@ let $debtMetter = document.getElementById("debtMetter") as HTMLProgressElement;
 let $crippleMetter = document.getElementById("crippleMetter",) as HTMLProgressElement;
 let $sprite = document.getElementById("sprite") as HTMLImageElement;
 
+
 let $hungerContainer = document.getElementById("hungerContainer");
 
 $hungerContainer?.addEventListener("click", () => {
